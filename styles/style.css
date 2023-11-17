@@ -1,8 +1,191 @@
-/* место для вашего кода */
-body{
-    background-color: aqua;
+body {
+  font-size: large;
+  font-family: Raleway;
 }
-.cover{
-    background-image: url(/images/cover.jpg);
-    width: 100%;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 30px;
+}
+header div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1000px;
+  height: 90px;
+}
+.home-view_lots-about_the_auction {
+  padding-top: 40px;
+}
+header img {
+  height: 100px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cover {
+  height: 800px;
+  width: 1420px;
+  display: inline-block;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/cover.jpg") no-repeat;
+  background-size: cover;
+  color: white;
+  position: relative;
+  padding-bottom: 50px;
+}
+.it {
+  display: block;
+  height: 150px;
+  width: 100%;
+  font-size: 100px;
+  font-weight: bolder;
+  letter-spacing: 35px;
+  margin-top: 180px;
+  padding-left: 40px;
+}
+.you {
+  text-align: center;
+  display: block;
+  height: 110px;
+  width: 100%;
+  font-size: 100px;
+  font-weight: bolder;
+  letter-spacing: 30px;
+}
+.need {
+  display: block;
+  height: 110px;
+  width: 100%;
+  font-size: 100px;
+  font-weight: bolder;
+  letter-spacing: 30px;
+  text-align: end;
+}
+.auction-of-things {
+  display: block;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  text-align: end;
+  padding-right: 40px;
+  font-size: 22px;
+  word-spacing: 10px;
+}
+.auction-of-things div {
+  display: inline-block;
+  border: 1px solid;
+  padding: 10px 20px;
+  margin-left: 60px;
+  word-spacing: normal;
+}
+
+.lots {
+  padding-top: 180px;
+  display: block;
+}
+.lots-name {
+  display: block;
+  font-weight: bolder;
+  font-size: 40px;
+  margin: 20px;
+  margin-left: 60px;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  height: 460px;
+  width: 360px;
+  display: inline-block;
+  color: white;
+  padding: 45px;
+  vertical-align: middle;
+  flex: 1;
+  margin: 15px;
+  position: relative;
+}
+.firs-card {
+  margin-left: 30px;
+}
+.end-card {
+  margin-right: 30px;
+}
+.card-name {
+  display: block;
+  font-weight: bolder;
+  font-size: larger;
+}
+.card-text {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  line-height: 24px;
+}
+.card-lot-01 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/card-lot-01.jpg") no-repeat;
+  background-size: cover;
+}
+.card-lot-02 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/card-lot-02.jpg") no-repeat;
+  background-size: cover;
+}
+.card-lot-03 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/card-lot-03.jpg") no-repeat;
+  background-size: cover;
+}
+.view_more {
+  display: block;
+  margin: 20px;
+  margin-left: 60px;
+}
+table {
+  margin: 40px 80px 80px 40px;
+  padding-left: 80px;
+  padding-top: 140px;
+}
+
+.black-circle {
+  width: 230px;
+  height: 230px;
+  background: black;
+  border-radius: 50%;
+  padding: 40px;
+  margin: 30px;
+}
+.black-circle img {
+  width: 160px;
+}
+.about-name {
+  font-weight: bolder;
+  font-size: 40px;
+  padding-left: 80px;
+}
+.about-text {
+  font-size: 20px;
+  width: 960px;
+  padding-left: 80px;
+}
+
+.footer {
+  padding: 30px;
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer img {
+  display: inline-block;
+  width: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.t-a-c {
+  text-align: center;
 }
