@@ -11,17 +11,31 @@
   </head>
   <body>
     <header>
-      <div class="header-menu">
-        <span>главная</span> ○ <a href="#">посмотреть лоты</a> ○
-        <a href="#">об аукционе</a>
-      </div>
-      <a href="#"><img src="images/logo-black.svg" title="логотип" /></a>
+      <nav class="header-menu">
+        <ul type="circle">
+          <li>главная</li>
+          <li>
+            <span> ◌ </span>
+            <a href="#">посмотреть лоты</a>
+          </li>
+          <li>
+            <span> ◌ </span>
+            <a href="#">об аукционе</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="#" class="logo-main"
+        ><img src="images/logo-black.svg" title="логотип"
+      /></a>
+
       <address>
         <p><a href="tel:+9 999 555 5555">+9 999 555 5555</a></p>
         <p><a href="mailto:info@sobaka.ge">info@sobaka.ge</a></p>
         <p>наб. Присенграхт 263-265, Амстердам</p>
       </address>
     </header>
+
     <main>
       <cover class="cover">
         <div class="cover-1-title">
@@ -37,18 +51,15 @@
           ><span class="cover-indent-30px">ад</span>о
         </div>
         <div class="auction-of-things">
-          аукцион вещей, в которые никто не верил
-          <a type="button" href="#">сделать ставку</a>
+          <p>аукцион вещей, в которые никто не верил</p>
+          <button>сделать ставку</button>
         </div>
       </cover>
       <section class="lots">
-        <p class="lots-name">ЛОТЫ</p>
+        <h2 class="lots-name">ЛОТЫ</h2>
         <div class="cards">
-          <a
-            href="#"
-            class="card the-film-of-the-director-who-dropped-out-of-film-school-img"
-          >
-            <p class="card-name">ФИЛЬМ РЕЖЕССЁРА, КОТОРЫЙ БРОСИЛ КИНОШКОЛУ</p>
+          <a href="#" class="card card-film">
+            <h2 class="card-name">фильм режессёра, который бросил киношколу</h2>
             <div class="text-block">
               <p class="card-text">
                 Не просто бросил, а ушел с первой лекции. Какой была ваша
@@ -57,14 +68,10 @@
             </div>
           </a>
 
-          <a
-            href="#"
-            class="card a-book-describing-one-boring-day-in-the-life-of-an-advertising-agent-img"
-            back-ground
-          >
-            <p class="card-name">
+          <a href="#" class="card card-book" back-ground>
+            <h2 class="card-name">
               книга, где описан один скучный день из жизни рекламного агента
-            </p>
+            </h2>
             <div class="text-block">
               <p class="card-text">
                 Объёмом почти в тысячу страниц. Иногда без знаков препинания и с
@@ -77,13 +84,10 @@
             </div>
           </a>
 
-          <a
-            href="#"
-            class="card a-picture-that-even-the-5-year-old-son-of-my-mothers-friend-will-repeat-img"
-          >
-            <p class="card-name">
+          <a href="#" class="card card-picture">
+            <h2 class="card-name">
               картина, которую повторит даже 5-летний сын маминой подруги
-            </p>
+            </h2>
             <div class="text-block">
               <p class="card-text">
                 Ну действительно, там линия, тут кружочек, а здесь и вовсе
@@ -99,21 +103,21 @@
         </div>
       </section>
 
-      <section class="circle-block">
-        <div class="circle">
+      <section class="about">
+        <div class="about-logo">
           <img src="images/logo-white.svg" />
         </div>
-        <div class="about">
+        <div class="about-text">
           <h3>об аукционе</h3>
           <p>
             Здесь вы не встретите очередное пафосное собрание невероятно
             дорогого анктивариата. Наши лоты вообще не должны были попасть ни на
-            один аукцион. Потому что нужен дневник девочки- подростка или
+            один аукцион. Потому что кому нужен дневник девочки- подростка или
             картина, которую может нарисовать даже ребёнок? Кому нужны все эти
             странные вещи, созданные любителями?
           </p>
           <p>
-            Слишком сложные или, наоборо, слишком простые. опережающие своё
+            Слишком сложные или, наоборо, слишком простые. Опережающие своё
             время. В пух и прах растерзанные критиками. Непринятые и непонятные.
             Когда-то они казались просто неудачными. но, несмотря на критику,
             кажущуюся простоту или сложность, сейчас буз этих лотов невозможно
@@ -124,18 +128,21 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer-element">
-        <a href="tel:+9 999 555 5555">+9 999 555 5555</a>
-        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-        наб. Присенграхт 263-265,<br />
-        Амстердам
+      <div class="contacts">
+        <ul>
+          <li><a href="tel:+9 999 555 5555">+9 999 555 5555</a></li>
+          <li><a href="mailto:info@sobaka.ge">info@sobaka.ge</a></li>
+          <li><p>наб. Присенграхт 263-265, Амстердам</p></li>
+        </ul>
       </div>
-      <nav class="menu-end footer-element">
-        <p href="#">главная</p>
-        <p><a href="#">посмотреть лоты</a></p>
-        <p><a href="#">об аукционе</a></p>
+      <nav class="menu-end">
+        <ul>
+          <li><a href="#" class="text-decoration-none">главная</a></li>
+          <li><a href="#">посмотреть лоты</a></li>
+          <li><a href="#">об аукционе</a></li>
+        </ul>
       </nav>
-      <div class="footer-element">
+      <div class="">
         <a href="#"><img src="images/yt.svg" /></a>
         <a href="#"><img src="images/vk.svg" /></a>
         <a href="#"><img src="images/pinterest.svg" /></a>
