@@ -1,26 +1,52 @@
 body {
   font-family: Raleway, sans-serif;
-  max-width: 100%;
   font-size: larger;
 }
 header {
+  height: 105px;
+  margin-top: 92px;
+  margin-left: 24px;
+  margin-right: 24px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 90px 30px;
-}
-header div {
-  max-width: 33%;
+  text-align: center;
 }
 header address {
-  max-width: 26%;
   font-style: normal;
+  max-width: 221px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 18px;
+  line-height: 1.3;
+  padding-right: 20px;
+  margin-right: 42px;
 }
 .header-menu {
-  padding-top: 40px;
+  margin-left: 26.52px;
+  max-width: 392px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.header-menu li {
+  display: inline-block;
+}
+
+.header-menu span {
+  font-size: 12px;
+}
+
+.logo-main {
+  text-align: center;
+  vertical-align: middle;
+  align-self: center;
+  margin-right: 113px;
 }
 
 header img {
-  height: 100px;
+  height: 105px;
 }
 
 .cover {
@@ -31,8 +57,9 @@ header img {
   background-size: cover;
   color: white;
   position: relative;
-  padding-bottom: 50px;
+  margin-top: 93px;
   text-transform: uppercase;
+  height: 757px;
 }
 .cover a {
   background: transparent;
@@ -56,8 +83,8 @@ header img {
   font-size: 100px;
   font-weight: bolder;
   letter-spacing: 35px;
-  padding-top: 180px;
-  padding-left: 40px;
+  padding-top: 165px;
+  padding-left: 50px;
 }
 .cover-2-title {
   text-align: center;
@@ -66,6 +93,7 @@ header img {
   font-weight: bolder;
   letter-spacing: 30px;
   text-align: center;
+  padding-top: 10px;
 }
 .cover-3-title {
   text-align: end;
@@ -74,25 +102,41 @@ header img {
   font-weight: bolder;
   letter-spacing: 30px;
   text-align: end;
-  padding-bottom: 180px;
+  padding-right: 20px;
+  margin-top: 3px;
 }
 .auction-of-things {
   width: 100%;
-  text-align: end;
-  padding-right: 40px;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 130px;
+}
+
+.auction-of-things p {
+  word-spacing: normal;
+  margin-left: 30px;
+  word-spacing: 18px;
+  font-size: 22px;
+}
+
+.auction-of-things button {
   font-size: 22px;
   word-spacing: 10px;
-}
-.auction-of-things div {
-  display: inline-block;
-  border: 1px solid;
-  padding: 10px 20px;
-  margin-left: 60px;
   word-spacing: normal;
+  max-width: 256px;
+  text-transform: uppercase;
+  background-color: transparent;
+  width: 256px;
+  height: 51px;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .lots {
-  padding-top: 180px;
+  padding-top: 160px;
   display: block;
 }
 .lots-name {
@@ -101,11 +145,11 @@ header img {
   font-size: 40px;
   margin: 20px;
   margin-left: 60px;
+  text-transform: uppercase;
 }
 .cards {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 33%);
+  display: flex;
+  justify-content: center;
 }
 .cards a {
   display: block;
@@ -115,23 +159,24 @@ header img {
 .card {
   display: block;
   color: white;
-  padding: 45px;
+  padding: 40px;
   margin: 15px;
   flex-grow: 1;
   padding-bottom: 30px;
-  min-height: 300px;
+  max-height: 563px;
+  max-width: 334px;
 }
-.the-film-of-the-director-who-dropped-out-of-film-school-img {
+.card-film {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../images/card-lot-01.jpg") no-repeat;
   background-size: cover;
 }
-.a-book-describing-one-boring-day-in-the-life-of-an-advertising-agent-img {
+.card-book {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../images/card-lot-02.jpg") no-repeat;
   background-size: cover;
 }
-.a-picture-that-even-the-5-year-old-son-of-my-mothers-friend-will-repeat-img {
+.card-picture {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../images/card-lot-03.jpg") no-repeat;
   background-size: cover;
@@ -151,51 +196,63 @@ header img {
 }
 
 .card-text {
-  padding-top: 30px;
+  max-width: 254px;
+  margin-top: 32px;
   line-height: 24px;
   align-self: end;
   justify-self: end;
+  display: grid;
+  align-items: end;
 }
 
 .view_more {
   display: block;
-  margin: 20px;
-  margin-left: 60px;
+  margin: 10px;
+  margin-left: 65px;
   text-decoration: underline;
 }
 
-.circle-block {
-  margin: 40px 80px 80px 40px;
-  padding-left: 80px;
-  padding-top: 120px;
+.about {
+  padding-left: 60px;
+  padding-top: 170px;
   display: table-cell;
   vertical-align: text-top;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.circle {
+.about-logo {
   width: 240px;
   height: 240px;
   background: black;
   border-radius: 50%;
-  padding: 40px;
-  margin: 20px;
+  text-align: center;
+  padding: 64px 46px;
+  margin-left: -10px;
+  margin-top: -360px;
+}
+.about-logo img {
+  width: 148px;
+  height: 114px;
+}
+.about-text {
+  text-align: left;
+  margin-top: 100px;
   display: inline-block;
+  padding-left: 72px;
 }
-.circle img {
-  padding-top: 20px;
-  width: 160px;
+
+.about-text p {
+  max-width: 696px;
+  letter-spacing: 0.1px;
 }
-.about {
-  margin-top: 120px;
-  display: inline-block;
-  padding-left: 100px;
-}
+
 .about h3 {
   font-weight: bolder;
   font-size: 40px;
   text-transform: uppercase;
-  padding-bottom: 90px;
+  padding-bottom: 98px;
 }
 .about p {
   font-size: 20px;
@@ -203,20 +260,32 @@ header img {
 }
 
 .footer {
-  padding: 30px;
-  padding-top: 80px;
+  padding: 50px;
+  padding-top: 150px;
   display: flex;
   justify-content: space-between;
 }
-.footer-element {
-  max-width: 18%;
+
+.contacts {
+  max-width: 241px;
+  max-height: 98px;
 }
+
+.footer li {
+  list-style-type: none;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
 .footer img {
   display: inline-block;
   width: 50px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .menu-end {
   text-align: center;
+  padding-left: 40px;
 }
