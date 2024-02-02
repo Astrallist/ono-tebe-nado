@@ -1,37 +1,53 @@
 body {
   font-family: Raleway, sans-serif;
   font-size: larger;
+  overflow-x: hidden;
 }
+
 header {
-  height: 105px;
   margin-top: 92px;
   margin-left: 24px;
   margin-right: 24px;
-  display: flex;
   align-items: center;
-  justify-content: space-between;
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 160px 1fr;
+  place-items: center;
 }
+
 header address {
   font-style: normal;
   max-width: 221px;
-  text-align: left;
   vertical-align: middle;
   font-size: 18px;
   line-height: 1.3;
-  padding-right: 20px;
-  margin-right: 42px;
+  float: right;
+  margin-left: 135px;
 }
+
+header address p {
+  text-align: left;
+}
+
 .header-menu {
-  margin-left: 26.52px;
   max-width: 392px;
   text-align: center;
   vertical-align: middle;
   font-size: 18px;
 }
 
+.header-menu ul {
+  list-style-type: circle;
+}
+
 .header-menu li {
-  display: inline-block;
+  float: left;
+  margin-left: 32px;
+}
+
+.header-menu li:first-child {
+  margin-left: 0;
+  list-style-type: none;
 }
 
 .header-menu span {
@@ -42,7 +58,7 @@ header address {
   text-align: center;
   vertical-align: middle;
   align-self: center;
-  margin-right: 113px;
+  min-height: 105px;
 }
 
 header img {
@@ -52,67 +68,59 @@ header img {
 .cover {
   display: block;
   max-width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/cover.jpg") no-repeat;
+  background: url("../images/cover.jpg") no-repeat;
   background-size: cover;
   color: white;
   position: relative;
-  margin-top: 93px;
+  margin-top: 92px;
   text-transform: uppercase;
-  height: 757px;
+  min-height: 757px;
+  padding-top: 165px;
+  padding-left: 50px;
+  padding-right: 20px;
 }
-.cover a {
-  background: transparent;
-  border: solid white 2px;
-  color: white;
-  text-transform: uppercase;
-  font-size: 22px;
-  padding: 10px 20px;
-  margin-left: 50px;
-  text-decoration: none;
-}
+
 .cover-indent-60px {
   letter-spacing: 60px;
 }
+
+.cover-indent-36px {
+  letter-spacing: 36px;
+}
+
 .cover-indent-30px {
   letter-spacing: 30px;
 }
-.cover-1-title {
+
+.cover-element {
+  display: block;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bolder;
+  margin-top: 20px;
+  font-size: 100px;
+  line-height: 100px;
+  margin-right: 28px;
+}
+
+.cover-element:first-child {
   text-align: start;
-  width: 100%;
-  font-size: 100px;
-  font-weight: bolder;
-  letter-spacing: 35px;
-  padding-top: 165px;
-  padding-left: 50px;
+  margin: 0;
+  line-height: 115px;
 }
-.cover-2-title {
-  text-align: center;
-  width: 100%;
-  font-size: 100px;
-  font-weight: bolder;
-  letter-spacing: 30px;
-  text-align: center;
-  padding-top: 10px;
-}
-.cover-3-title {
+
+.last-element-cover {
+  right: 0px;
   text-align: end;
-  width: 100%;
-  font-size: 100px;
-  font-weight: bolder;
-  letter-spacing: 30px;
-  text-align: end;
-  padding-right: 20px;
-  margin-top: 3px;
+  margin-right: 0;
 }
+
 .auction-of-things {
-  width: 100%;
-  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  margin-top: 130px;
+  margin-top: 136px;
 }
 
 .auction-of-things p {
@@ -123,6 +131,7 @@ header img {
 }
 
 .auction-of-things button {
+  font-family: inherit;
   font-size: 22px;
   word-spacing: 10px;
   word-spacing: normal;
@@ -131,26 +140,34 @@ header img {
   background-color: transparent;
   width: 256px;
   height: 51px;
-  border: 1px solid #fff;
   color: #fff;
+  border: 1px solid currentColor;
+  margin-right: 30px;
 }
 
 .lots {
   padding-top: 160px;
   display: block;
 }
+
 .lots-name {
   display: block;
-  font-weight: bolder;
   font-size: 40px;
   margin: 20px;
-  margin-left: 60px;
+  margin-left: 65px;
   text-transform: uppercase;
+  letter-spacing: 0.2px;
 }
+
 .cards {
+  margin-top: 27px;
+  margin-left: 24px;
+  margin-right: 24px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
+
 .cards a {
   display: block;
   text-decoration: none;
@@ -159,40 +176,45 @@ header img {
 .card {
   display: block;
   color: white;
-  padding: 40px;
-  margin: 15px;
+  padding: 50px 40px;
+  margin-left: 25px;
   flex-grow: 1;
-  padding-bottom: 30px;
-  max-height: 563px;
-  max-width: 334px;
+  min-height: 563px;
+  width: 334px;
+  background-size: cover;
+  position: relative;
 }
+
+.card:first-child {
+  margin-left: 0;
+}
+
 .card-film {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/card-lot-01.jpg") no-repeat;
-  background-size: cover;
+  background: url("../images/card-lot-01.jpg") no-repeat;
 }
+
 .card-book {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/card-lot-02.jpg") no-repeat;
-  background-size: cover;
+  background: url("../images/card-lot-02.jpg") no-repeat;
 }
+
 .card-picture {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/card-lot-03.jpg") no-repeat;
-  background-size: cover;
+  background: url("../images/card-lot-03.jpg") no-repeat;
 }
+
 .card-name {
   text-decoration: underline;
   text-transform: uppercase;
   width: 100%;
-  font-weight: bolder;
   font-size: larger;
   display: block;
+  font-size: 22px;
 }
 
 .text-block {
-  display: grid;
-  min-height: 280px;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 48px;
+  letter-spacing: 0.5px;
 }
 
 .card-text {
@@ -203,18 +225,21 @@ header img {
   justify-self: end;
   display: grid;
   align-items: end;
+  font-size: 20px;
+  letter-spacing: 0px;
 }
 
 .view_more {
   display: block;
-  margin: 10px;
+  margin-top: 30px;
   margin-left: 65px;
   text-decoration: underline;
+  font-size: 20px;
 }
 
 .about {
-  padding-left: 60px;
-  padding-top: 170px;
+  padding-left: 50px;
+  margin-top: 155px;
   display: table-cell;
   vertical-align: text-top;
   display: flex;
@@ -222,23 +247,26 @@ header img {
   justify-content: center;
   text-align: center;
 }
+
 .about-logo {
   width: 240px;
   height: 240px;
   background: black;
   border-radius: 50%;
   text-align: center;
+  vertical-align: top;
   padding: 64px 46px;
-  margin-left: -10px;
-  margin-top: -360px;
+  margin-bottom: 295px;
 }
+
 .about-logo img {
   width: 148px;
   height: 114px;
 }
+
 .about-text {
   text-align: left;
-  margin-top: 100px;
+  margin-top: 70px;
   display: inline-block;
   padding-left: 72px;
 }
@@ -246,36 +274,42 @@ header img {
 .about-text p {
   max-width: 696px;
   letter-spacing: 0.1px;
+  margin-top: 27px;
+  font-size: 18px;
+}
+
+.about-text p:first-child {
+  margin-top: 0px;
 }
 
 .about h3 {
   font-weight: bolder;
   font-size: 40px;
   text-transform: uppercase;
-  padding-bottom: 98px;
-}
-.about p {
-  font-size: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 70px;
+  padding-top: 58px;
 }
 
 .footer {
+  font-size: 20px;
   padding: 50px;
-  padding-top: 150px;
+  padding-top: 147px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .contacts {
   max-width: 241px;
-  max-height: 98px;
+  padding-top: 32px;
+  line-height: 25px;
 }
 
 .footer li {
   list-style-type: none;
 }
 
-.text-decoration-none {
+.link-active {
   text-decoration: none;
 }
 
@@ -283,9 +317,18 @@ header img {
   display: inline-block;
   width: 50px;
   margin-left: 40px;
+  margin-bottom: 14px;
 }
 
 .menu-end {
   text-align: center;
   padding-left: 40px;
+  padding-top: 0px;
+  line-height: 22px;
+}
+
+.black-lens {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+  background-size: cover;
 }
