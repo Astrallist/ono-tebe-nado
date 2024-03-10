@@ -1,13 +1,12 @@
 body {
   font-family: Raleway, sans-serif;
   font-size: larger;
-  overflow-x: hidden;
 }
 
 header {
+  width: 1052px;
+  margin: 0 auto;
   margin-top: 92px;
-  margin-left: 24px;
-  margin-right: 24px;
   align-items: center;
   text-align: center;
   display: grid;
@@ -22,11 +21,13 @@ header address {
   font-size: 18px;
   line-height: 1.3;
   float: right;
-  margin-left: 135px;
+  justify-self: end;
 }
 
 header address p {
   text-align: left;
+  line-height: 24.3px;
+  font-weight: 400;
 }
 
 .header-menu {
@@ -34,6 +35,8 @@ header address p {
   text-align: center;
   vertical-align: middle;
   font-size: 18px;
+  font-weight: 400;
+  line-height: 21.13px;
 }
 
 .header-menu ul {
@@ -76,43 +79,46 @@ header img {
   text-transform: uppercase;
   min-height: 757px;
   padding-top: 165px;
-  padding-left: 50px;
+  padding-left: 20px;
   padding-right: 20px;
+  background-position: center;
 }
 
-.cover-indent-60px {
-  letter-spacing: 60px;
+.cover_title {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  font-style: normal;
+  color: white;
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.cover-indent-36px {
-  letter-spacing: 36px;
-}
-
-.cover-indent-30px {
-  letter-spacing: 30px;
-}
-
-.cover-element {
+.aligned-text {
   display: block;
+}
+
+.aligned-text_center {
   text-align: center;
-  font-size: 100px;
-  font-weight: bolder;
-  margin-top: 20px;
-  font-size: 100px;
-  line-height: 100px;
-  margin-right: 28px;
+  padding-top: 9px;
 }
 
-.cover-element:first-child {
-  text-align: start;
-  margin: 0;
-  line-height: 115px;
+.aligned-text_right {
+  text-align: right;
+  padding-top: 2px;
 }
 
-.last-element-cover {
-  right: 0px;
-  text-align: end;
-  margin-right: 0;
+.letter-spacing-extended {
+  letter-spacing: 0.6em;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
 }
 
 .auction-of-things {
@@ -120,7 +126,8 @@ header img {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  margin-top: 136px;
+  margin-top: 128px;
+  padding-left: 30px;
 }
 
 .auction-of-things p {
@@ -154,17 +161,16 @@ header img {
   display: block;
   font-size: 40px;
   margin: 20px;
+  margin-bottom: 0;
   margin-left: 65px;
   text-transform: uppercase;
   letter-spacing: 0.2px;
 }
 
 .cards {
-  margin-top: 27px;
   margin-left: 24px;
   margin-right: 24px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -174,18 +180,29 @@ header img {
 }
 
 .card {
-  display: block;
+  margin-top: 27px;
+  align-items: stretch;
+  align-content: stretch;
   color: white;
-  padding: 50px 40px;
+  padding: 50px 40px 48px 40px;
   margin-left: 25px;
-  flex-grow: 1;
   min-height: 563px;
-  width: 334px;
+  max-width: 334px;
   background-size: cover;
-  position: relative;
+  background-position: center;
+  background-size: cover;
 }
 
-.card:first-child {
+.card-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 464px;
+  max-width: 334px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card:nth-child(3n + 1) {
   margin-left: 0;
 }
 
@@ -206,27 +223,20 @@ header img {
   text-transform: uppercase;
   width: 100%;
   font-size: larger;
-  display: block;
   font-size: 22px;
-}
-
-.text-block {
-  position: absolute;
-  bottom: 0px;
-  margin-bottom: 48px;
-  letter-spacing: 0.5px;
+  margin: 0;
 }
 
 .card-text {
-  max-width: 254px;
-  margin-top: 32px;
+  bottom: 0px;
+  letter-spacing: 0.5px;
+  margin-top: auto;
+  margin-bottom: 0;
   line-height: 24px;
-  align-self: end;
-  justify-self: end;
-  display: grid;
-  align-items: end;
   font-size: 20px;
   letter-spacing: 0px;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .view_more {
@@ -238,8 +248,8 @@ header img {
 }
 
 .about {
-  padding-left: 50px;
-  margin-top: 155px;
+  padding-left: 46px;
+  margin-top: 125px;
   display: table-cell;
   vertical-align: text-top;
   display: flex;
@@ -255,8 +265,8 @@ header img {
   border-radius: 50%;
   text-align: center;
   vertical-align: top;
-  padding: 64px 46px;
-  margin-bottom: 295px;
+  padding: 65px 46px;
+  margin-bottom: 267px;
 }
 
 .about-logo img {
@@ -266,19 +276,21 @@ header img {
 
 .about-text {
   text-align: left;
-  margin-top: 70px;
-  display: inline-block;
+  margin-top: 100px;
+  display: block;
   padding-left: 72px;
 }
 
 .about-text p {
-  max-width: 696px;
-  letter-spacing: 0.1px;
-  margin-top: 27px;
-  font-size: 18px;
+  stroke-width: 400;
+  max-width: 693px;
+  margin-top: 25px;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.06px;
 }
 
-.about-text p:first-child {
+.about-text p:first-of-type {
   margin-top: 0px;
 }
 
@@ -286,14 +298,14 @@ header img {
   font-weight: bolder;
   font-size: 40px;
   text-transform: uppercase;
-  padding-bottom: 70px;
-  padding-top: 58px;
+  padding-bottom: 100px;
+  padding-top: 57px;
 }
 
 .footer {
   font-size: 20px;
   padding: 50px;
-  padding-top: 147px;
+  padding-top: 149px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -302,7 +314,9 @@ header img {
 .contacts {
   max-width: 241px;
   padding-top: 32px;
-  line-height: 25px;
+  line-height: 24.3px;
+  font-size: 18px;
+  letter-spacing: 400;
 }
 
 .footer li {
@@ -314,7 +328,6 @@ header img {
 }
 
 .footer img {
-  display: inline-block;
   width: 50px;
   margin-left: 40px;
   margin-bottom: 14px;
@@ -324,11 +337,12 @@ header img {
   text-align: center;
   padding-left: 40px;
   padding-top: 0px;
-  line-height: 22px;
+  line-height: 21.13px;
+  letter-spacing: 400;
+  font-size: 18px;
 }
 
-.black-lens {
+.lens {
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: multiply;
-  background-size: cover;
 }
